@@ -6,8 +6,7 @@ const AGENT_URL = process.env.AGENT_BACKEND_URL ?? "http://localhost:8000/v1/cha
 
 const runtime = new CopilotRuntime({
   agents: {
-    agentic_chat: new HttpAgent({ url: AGENT_URL }),
-    human_in_the_loop: new HttpAgent({ url: AGENT_URL }),
+    chat: new HttpAgent({ url: AGENT_URL }),
   },
 });
 
